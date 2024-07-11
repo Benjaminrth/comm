@@ -48,7 +48,7 @@ const PinEntry = ({ onPinSubmit }) => {
           {[...Array(4)].map((_, index) => (
             <div
               key={index}
-              className={`w-3 h-3 rounded-full ${
+              className={`w-6 h-6 rounded-full ${
                 pin.length > index ? 'bg-white' : 'border-2 border-white'
               }`}
             ></div>
@@ -57,13 +57,13 @@ const PinEntry = ({ onPinSubmit }) => {
         
         <input
           ref={inputRef}
-          type="number"
+          type="tel"
           pattern="[0-9]*"
           inputMode="numeric"
           value={pin}
           onChange={handlePinChange}
-          className="absolute opacity-0 w-1 h-1"
-          style={{ top: '-9999px' }}
+          className="opacity-0 absolute w-full h-full"
+          style={{ top: '0', left: '0' }}
         />
         
         <div className="text-center mt-8">
