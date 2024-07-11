@@ -27,6 +27,12 @@ const PinEntry = ({ onPinSubmit }) => {
     }
   };
 
+  const handleDotClick = () => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  };
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-4">
       <div className="w-full max-w-xs">
@@ -38,7 +44,7 @@ const PinEntry = ({ onPinSubmit }) => {
         
         <h2 className="text-2xl font-bold mb-6 text-center">Enter your PIN</h2>
         
-        <div className="flex justify-center space-x-4 mb-8">
+        <div className="flex justify-center space-x-4 mb-8" onClick={handleDotClick}>
           {[...Array(4)].map((_, index) => (
             <div
               key={index}
@@ -56,7 +62,7 @@ const PinEntry = ({ onPinSubmit }) => {
           inputMode="numeric"
           value={pin}
           onChange={handlePinChange}
-          className="opacity-0 absolute"
+          className="absolute opacity-0 w-1 h-1"
           style={{ top: '-9999px' }}
         />
         
