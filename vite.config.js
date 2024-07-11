@@ -12,7 +12,7 @@ export default defineConfig({
       manifest: {
               name: 'Banking PWA',
         short_name: 'BankPWA',
-        start_url: '/', // <--- 👀
+        start_url: '/comm', // <--- 👀
         description: 'Description', // <--- 👀
         theme_color: '#ffffff',
         icons: [

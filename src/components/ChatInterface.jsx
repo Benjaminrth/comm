@@ -19,7 +19,7 @@ const ChatInterface = ({ onBack }) => {
       const newMessage = {
         text: text,
         sender: isBot ? 'bot' : 'user',
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+
       };
       setMessages([...messages, newMessage]);
       setInputMessage('');
@@ -44,7 +44,7 @@ const ChatInterface = ({ onBack }) => {
               <p className="text-sm">{message.text}</p>
               <p className={`text-xs text-gray-400 mt-1 ${
                 message.sender === 'user' ? 'text-right' : 'text-left'
-              }`}>{message.timestamp}</p>
+              }`}></p>
             </div>
           </div>
         ))}
